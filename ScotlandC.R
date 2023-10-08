@@ -11,9 +11,9 @@ fancy <- theme(legend.justification = c("right", "centre"),
   theme(axis.text.x = element_text(colour = "grey", size = 10))+
   theme(axis.text.y = element_text(colour = "grey", size = 10))
 
-mydata <- read.xlsx("C:/Users/samue/Downloads/R/ScotlandC.xlsx", 1)
+mydata <- read.xlsx("ScotlandC.xlsx", 1)
 
-sSize <- 0.35
+sSize <- 0.28
 kn <- 1000
 S <- 1
 S2 <- 1.5
@@ -35,7 +35,7 @@ base <- ggplot(mydata) +
   geom_smooth(aes(Date, CON), color="#0087dc",method="loess", size=S, se=FALSE,n=kn, span = sSize)+
   geom_smooth(aes(Date, LAB),color="#e4003b", fill = "lightblue3",method="loess", size=S, se=FALSE,n=kn, span = sSize)+
   geom_smooth(aes(Date, LDM), color="#faa61a",method="loess", size=S, se=FALSE,n=kn, span = sSize)+
-  geom_smooth(aes(Date, GRN),color="#00b140", fill = "lightblue3",method="loess", size=S, se=FALSE,n=kn, span = 1)+
+  geom_smooth(aes(Date, GRN),color="#00b140", fill = "lightblue3",method="loess", size=S, se=FALSE,n=kn, span = 0.5)+
   
   guides(color = guide_legend(override.aes = list(size=10, stroke=NA, alpha=1)))+
   ylab("Voteshare (%)")+

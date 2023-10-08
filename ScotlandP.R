@@ -11,9 +11,9 @@ fancy <- theme(legend.justification = c("right", "centre"),
   theme(axis.text.x = element_text(colour = "black", size = 10))+
   theme(axis.text.y = element_text(colour = "black", size = 10))
 
-mydata <- read.xlsx("C:/Users/samue/Downloads/R/ScotlandP.xlsx", 1)
+mydata <- read.xlsx("ScotlandP.xlsx", 1)
 
-sSize <- 0.35
+sSize <- 0.28
 kn <- 1000
 S <- 1
 S2 <- 1.5
